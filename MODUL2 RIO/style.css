@@ -1,0 +1,11 @@
+body {
+    font-family: "arial";
+}
+
+.item-list {
+    color: hsl(216, 98%, 52%) !important;
+}
+
+.booking {
+    background: #f8f9fa !important;
+}
