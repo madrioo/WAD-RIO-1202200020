@@ -1,5 +1,5 @@
 <?php
-require './conector.php';
+require './connector.php';
 
 $id = $_GET['id'];
 $namamobil = $_POST['nama'];
