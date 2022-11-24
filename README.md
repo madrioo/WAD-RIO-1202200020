@@ -1,2 +1,2 @@
 # WAD-RIO-1202200020
-Praktikum WAD
+Praktikum WAD 2022
