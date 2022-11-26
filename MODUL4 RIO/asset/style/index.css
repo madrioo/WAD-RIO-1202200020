@@ -1,0 +1,275 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i");
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar a {
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Jumbotron
+--------------------------------------------------------------*/
+
+#home h1 {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+#home p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+#home .rap {
+    margin-top: 200px;
+}
+
+#home .button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 137px;
+    height: 51px;
+    background: #3563e9;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 45px;
+    bottom: 30px;
+    z-index: 996;
+    background: #3EABB3;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #6bc1e9;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Add Page
+--------------------------------------------------------------*/
+
+#form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#form .add {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+#form .addparagraf {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #757575;
+}
+
+#form form {
+    margin-top: 50px;
+}
+
+#form label,
+input {
+    display: block;
+}
+
+#form label {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+    margin-top: 30px;
+}
+
+#form input {
+    width: 1000px;
+    height: 50px;
+    border: 1px solid #757575;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#form textarea {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# List Page
+--------------------------------------------------------------*/
+
+#list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#list h1 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+#list p {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #757575;
+    margin-top: 20px;
+}
+
+#list .card {
+    background: #ffffff;
+    box-shadow: 6px 14px 40px rgba(210, 210, 210, 0.6);
+    border-radius: 16px;
+    width: 400px;
+    margin-top: 50px;
+}
+
+
+/*--------------------------------------------------------------
+# Detail Page
+--------------------------------------------------------------*/
+
+#detail {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#detail .add {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+#detail .addparagraf {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #757575;
+}
+
+#detail img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+#detail label,
+input {
+    display: block;
+}
+
+#detail label {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+    margin-top: 30px;
+}
+
+#detail input {
+    width: 600px;
+    height: 50px;
+    border: 1px solid #757575;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#detail textarea {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# WA
+--------------------------------------------------------------*/
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 45px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
