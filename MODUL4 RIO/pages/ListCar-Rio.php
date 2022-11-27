@@ -32,7 +32,7 @@ $result = mysqli_query($connection, $query);
 </head>
 
 <body>
-      <!-- navbar -->
+      <!-- Navbar Start -->
       <?php
     $getUser = mysqli_query($connection, "select * from users");
     while($getName = mysqli_fetch_array($getUser)){
@@ -72,7 +72,7 @@ $result = mysqli_query($connection, $query);
         </div>
       </div>
     </nav>
-    <!-- end navbar -->
+    <!-- Navbar End -->
     <?php
     }
     ?>

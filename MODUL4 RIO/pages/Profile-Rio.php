@@ -29,7 +29,7 @@ include '../config/connector.php';
   </style>
 </head>
 
-    <title>Home | Rio_1202200020</title>
+    <title>Profile | Rio_1202200020</title>
   </head>
 
   <body>

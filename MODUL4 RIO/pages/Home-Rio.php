@@ -40,7 +40,7 @@ function onClick($result)
 </head>
 
 <body>
-      <!-- navbar -->
+      <!-- Navbar Start -->
       <?php
     $getUser = mysqli_query($connection, "select * from users");
     while($getName = mysqli_fetch_array($getUser)){
@@ -80,7 +80,7 @@ function onClick($result)
         </div>
       </div>
     </nav>
-    <!-- end navbar -->
+    <!-- Navbar End -->
     <?php
     }
     ?>
