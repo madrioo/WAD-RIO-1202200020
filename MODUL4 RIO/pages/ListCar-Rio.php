@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../config/connector.php';
 
 $query = "SELECT * FROM showroom_rio_table";
@@ -53,7 +54,7 @@ $result = mysqli_query($connection, $query);
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="Home-Rio.php">Home</a>
             <a class="nav-link" href="../pages/ListCar-Rio.php">MyCar</a>
           </div>
         </div>
@@ -62,7 +63,7 @@ $result = mysqli_query($connection, $query);
           <button class="btn btn-outline-dark" type="submit" style="color: white;">Add Car</button></a>
           <div class="dropdown ms-4">
             <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <?php echo $getName['nama'];?>
+            <?php echo $_SESSION['email'];?>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" href="../pages/Profile-Rio.php">Profile</a></li>

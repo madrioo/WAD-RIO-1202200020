@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../config/connector.php';
 
 $query = "SELECT * FROM showroom_rio_table";
@@ -14,7 +15,7 @@ function onClick($result)
 }
 ?>
 
-<!doctype html>
+<!doctype html> 
 <html lang="en">
 
 <head>
@@ -71,7 +72,7 @@ function onClick($result)
           <button class="btn btn-outline-dark" type="submit" style="color: white;">Add Car</button></a>
           <div class="dropdown ms-4">
             <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <?php echo $getName['nama'];?>
+            <?php echo $_SESSION['email'];?>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" href="../pages/Profile-Rio.php">Profile</a></li>

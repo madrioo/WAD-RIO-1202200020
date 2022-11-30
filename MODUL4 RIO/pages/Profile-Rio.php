@@ -11,7 +11,7 @@ include '../config/connector.php';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Home | Rio_1202200020</title>
+  <title>Profile | Rio_1202200020</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -34,9 +34,9 @@ include '../config/connector.php';
 
   <body>
 <!-- Navbar Start -->
-    <?php
-    $getUser = mysqli_query($connection, "select * from users");
-    while($dataUser = mysqli_fetch_array($getUser)){
+<?php
+    $getUser = mysqli_query($connection, "select * from users WHERE email='$_SESSION[email]'");
+    $dataUser = mysqli_fetch_array($getUser);
     ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
      
@@ -54,7 +54,7 @@ include '../config/connector.php';
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="../index.php">Home</a>
+            <a class="nav-link" href="../Home-Rio.php">Home</a>
             <a class="nav-link" href="../pages/ListCar-Rio.php">MyCar</a>
           </div>
         </div>
@@ -63,7 +63,7 @@ include '../config/connector.php';
           <button class="btn btn-outline-dark" type="submit" style="color: white;">add car</button></a>
           <div class="dropdown ms-4">
             <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <?php echo $dataUser['nama'];?>
+              <?php echo $_SESSION['email'];?>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" href="../pages/Profile-Rio.php">Profile</a></li>
@@ -81,6 +81,7 @@ include '../config/connector.php';
         
         <h1 class="titleInsert" align="center">Profile</h1>
         <form enctype="multipart/form-data" method="POST" action="../config/update.php" class="form-input" name="form-edit">
+        <input type="hidden" name="id" value="<?php echo $_SESSION['email'];?>">
             <input type="hidden" name="id" value="<?php echo $dataUser['id'];?>">
           <div class="mb-3">
             <label for="inputNamaMobil" class="form-label">Email</label>
@@ -89,7 +90,7 @@ include '../config/connector.php';
               class="form-control"
               value="<?php echo $dataUser['email'];?>"
               name="email"
-              disabled
+
             />
           </div>
           <div class="mb-3">
@@ -133,13 +134,12 @@ include '../config/connector.php';
       </div>
     </section>
     <!-- End Form -->
-    <?php
-    }
-    ?>
+    <div class="container">
     <div class="d-flex align-items-center gap-5 mt-5" align="center">
     <img src="<?php echo "../asset/images/logo-ead.png" ?>" alt="logoead" style="width:100px;">
             <p style="margin-top: 20px; font-size:15px;">Rio_1202200020</p>
     </div> 
+    </div>
 
   <!-- Footer Start -->
   <footer id="footer">

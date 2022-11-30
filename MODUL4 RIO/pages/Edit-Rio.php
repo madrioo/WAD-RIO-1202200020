@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../config/connector.php';
 
 $id = $_GET['id'];
@@ -36,16 +37,45 @@ $result = mysqli_query($connection, $sql);
 
 <body>
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-primary">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav gap-3">
-          <a class="nav-link" href="../index.php">Home</a>
-          <a class="nav-link" style="color: white;" href="#">MyCar</a>
+  <?php
+    $getUser = mysqli_query($connection, "select * from users WHERE email='$_SESSION[email]'");
+    $dataUser = mysqli_fetch_array($getUser);
+    ?>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+     
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="../Home-Rio.php">Home</a>
+            <a class="nav-link" href="../pages/ListCar-Rio.php">MyCar</a>
+          </div>
+        </div>
+        <div class="d-flex">
+          <a href="../pages/Add-Rio.php">
+          <button class="btn btn-outline-dark" type="submit" style="color: white;">add car</button></a>
+          <div class="dropdown ms-4">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <?php echo $_SESSION['email'];?>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="../pages/Profile-Rio.php">Profile</a></li>
+              <li><a class="dropdown-item" href="../config/logout.php">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   <!-- Navbar End -->
 
   <!-- Form Start -->
