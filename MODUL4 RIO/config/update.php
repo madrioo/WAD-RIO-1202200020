@@ -1,5 +1,5 @@
 <?php 
-cookies_start();
+session_start();
 
 require 'connector.php';
  
