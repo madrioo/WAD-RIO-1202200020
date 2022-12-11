@@ -46,7 +46,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         
-        return view('product.edit', compact('product')); 
+        return view('after.edit', compact('product')); 
     }
 
     public function update(Request $request, $id)
@@ -61,10 +61,15 @@ class ProductController extends Controller
         }
 
         Product::find($id)->update([
-            'nama' => $request -> name,
-            'harga' => $request -> price,
-            'gambar' => $imgName
-        ]);
+                'user_id' => $request->user_id,
+                'name' => $request -> nama_mobil,
+                'owner' => $request -> pemilik_mobil,
+                'brand' => $request -> merk_mobil,
+                'purchase_date' => $request -> tanggal_beli,
+                'description' => $request -> deskripsi,
+                'image' => $imgName,
+                'status' => $request -> status,
+            ]);
 
         return redirect('/product');
     }
@@ -75,5 +80,11 @@ class ProductController extends Controller
         Product::find($id)->delete();
 
         return redirect('/product');  
+    }
+
+    public function show($id) 
+    {
+        $Product = Product::find($id);
+        return view('after.detail', compact('Product')); 
     }
 }
