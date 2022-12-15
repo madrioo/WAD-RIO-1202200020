@@ -59,7 +59,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function user()
+    public function profile()
     {
         return view('after.profile');
     }

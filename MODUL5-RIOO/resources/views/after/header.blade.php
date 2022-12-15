@@ -61,6 +61,7 @@
     </nav>
     <!-- Navbar End -->
     @endauth
+    @yield('content')
 </body>
 
 
